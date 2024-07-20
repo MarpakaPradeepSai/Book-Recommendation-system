@@ -4,10 +4,10 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load your final filtered dataframe
-final_filtered_df = pd.read_csv('C:\\Users\\prade\\Downloads\\final_filtered_df.csv')
+final_filtered_df = pd.read_csv('final_filtered_df.csv')
 
 # Load the dataframe containing book URLs
-book_urls_df = pd.read_csv("C:\\Users\\prade\\Downloads\\Books.csv")
+book_urls_df = pd.read_csv("Books.csv")
 book_urls_df.rename(columns={'Book-Title': 'title'}, inplace=True)
 
 # Merge the dataframes on the title
@@ -173,7 +173,3 @@ if st.button('Recommend books'):
             st.image('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHV3M2w0bW9mMnNzeG05NTBzcjFzc29uY21yeWw1aXhnZm40bzlleSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wIVA0zh5pt0G5YtcAL/giphy.webp', use_column_width=True)
     else:
         st.write("Please enter a book title.")
-        
-        
-#final_filtered_df['Image-URL-L'][final_filtered_df['title']=='Jacob Have I Loved']
-#print(final_filtered_df.loc[final_filtered_df['title']=="The Kitchen God's Wife", 'Image-URL-L'].values)
