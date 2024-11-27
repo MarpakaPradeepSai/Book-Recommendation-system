@@ -10,11 +10,7 @@ final_filtered_df = pd.read_csv('final_filtered_df.csv')
 book_urls_df = pd.read_csv("Books.csv")
 book_urls_df.rename(columns={'Book-Title': 'title'}, inplace=True)
 
-# Concatenate along columns
-final_filtered_df = pd.concat([final_filtered_df, book_urls_df], axis=1, join='left')
-
-# Reset index if needed
-final_filtered_df.reset_index(inplace=True)
+final_filtered_df = final_filtered_df.set_index('title').join(book_urls_df.set_index('title'), how='left').reset_index()
 
 # URL to replace
 url1 = 'http://images.amazon.com/images/P/0690040784.01.LZZZZZZZ.jpg'
