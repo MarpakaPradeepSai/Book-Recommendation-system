@@ -7,11 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 final_filtered_df = pd.read_csv('final_filtered_df.csv')
 
 # Load the dataframe containing book URLs
-# Provide the raw URL of the file
-url = "https://raw.githubusercontent.com/MarpakaPradeepSai/repository/main/Datasets/Books.csv"
-
-# Read the CSV file from the URL
-book_urls_df = pd.read_csv(url)
+book_urls_df = pd.read_csv("./Datasets/Books.csv")
 book_urls_df.rename(columns={'Book-Title': 'title'}, inplace=True)
 
 # Merge the dataframes on the title
