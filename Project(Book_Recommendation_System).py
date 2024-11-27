@@ -10,8 +10,8 @@ final_filtered_df = pd.read_csv('final_filtered_df.csv')
 book_urls_df = pd.read_csv("Books.csv")
 book_urls_df.rename(columns={'Book-Title': 'title'}, inplace=True)
 
-# Use join to merge
-final_filtered_df = final_filtered_df.join(book_urls_df, how='left')
+# Concatenate along columns
+final_filtered_df = pd.concat([final_filtered_df, book_urls_df], axis=1, join='left')
 
 # Reset index if needed
 final_filtered_df.reset_index(inplace=True)
