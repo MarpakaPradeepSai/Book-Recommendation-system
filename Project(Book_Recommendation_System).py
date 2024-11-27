@@ -10,7 +10,8 @@ final_filtered_df = pd.read_csv('final_filtered_df.csv')
 book_urls_df = pd.read_csv("Books.csv")
 book_urls_df.rename(columns={'Book-Title': 'title'}, inplace=True)
 
-final_filtered_df = pd.merge(final_filtered_df, book_urls_df, on='title', how='left')
+# Merge the dataframes on the title
+final_filtered_df = final_filtered_df.merge(book_urls_df, on='title', how='left')
 
 # URL to replace
 url1 = 'http://images.amazon.com/images/P/0690040784.01.LZZZZZZZ.jpg'
