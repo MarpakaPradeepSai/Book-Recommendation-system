@@ -9,7 +9,6 @@ final_filtered_df = pd.read_csv('final_filtered_df.csv')
 # Load the dataframe containing book URLs
 book_urls_df = pd.read_csv("Books.csv")
 book_urls_df.rename(columns={'Book-Title': 'title'}, inplace=True)
-book_url_df = book_urls_df
 
 # Merge the dataframes on the title
 final_filtered_df = final_filtered_df.merge(book_urls_df, on='title', how='left')
