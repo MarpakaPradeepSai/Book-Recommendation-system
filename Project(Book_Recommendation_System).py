@@ -131,7 +131,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("<p class='subheader'>Let Us Help You Choose Your Next Book!</p>", unsafe_allow_html=True)
-st.image('https://img.freepik.com/premium-vector/bookcase-with-books_182089-197.jpg', use_column_width=True)
+st.image('https://img.freepik.com/premium-vector/bookcase-with-books_182089-197.jpg', use_container_width=True)
 
 # Create a selectbox for book title with autocomplete
 all_books = final_filtered_df['title'].unique().tolist()
@@ -178,7 +178,7 @@ if st.button('Recommend books'):
                 st.markdown("<div class='extra-space'></div>", unsafe_allow_html=True)
                 
                 # Display the final images
-                st.image('https://theweekjunior.co.uk/sites/default/files/inline-images/DM-596_TWJ_Landing_page_text_02.png', use_column_width=True)
-                st.image('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHV3M2w0bW9mMnNzeG05NTBzcjFzc29uY21yeWw1aXhnZm40bzlleSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wIVA0zh5pt0G5YtcAL/giphy.webp', use_column_width=True)
+                st.image('https://theweekjunior.co.uk/sites/default/files/inline-images/DM-596_TWJ_Landing_page_text_02.png', use_container_width=True)
+                st.image('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHV3M2w0bW9mMnNzeG05NTBzcjFzc29uY21yeWw1aXhnZm40bzlleSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wIVA0zh5pt0G5YtcAL/giphy.webp', use_container_width=True)
         else:
             st.write("Please enter a book title.")
