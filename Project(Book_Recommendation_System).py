@@ -129,13 +129,14 @@ st.markdown("""
 st.markdown("<p class='subheader'>Let Us Help You Choose Your Next Book!</p>", unsafe_allow_html=True)
 st.image('https://img.freepik.com/premium-vector/bookcase-with-books_182089-197.jpg', use_container_width=True)
 
-# Create a selectbox for book title with autocomplete
+# Create a selectbox for book title with autocomplete (outside of button logic)
 all_books = final_filtered_df['title'].unique().tolist()
 book_title = st.selectbox('Enter a book title:', [''] + all_books, key='book_title')
 
+# Create the number input for recommendations (outside of button logic)
 num_recommendations = st.number_input('Enter the number of recommendations:', min_value=1, max_value=50, value=10)
 
-# Place the button to trigger the recommendation
+# Trigger logic only when the button is pressed
 if st.button('Recommend books'):
     if book_title:
         if book_title != '':
