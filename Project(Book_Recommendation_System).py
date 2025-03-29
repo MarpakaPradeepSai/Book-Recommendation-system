@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
+import warnings
+warnings.filterwarnings('ignore')
+
 # Load your final filtered dataframe
 final_filtered_df = pd.read_csv('final_filtered_df.csv')
 
